@@ -1,0 +1,35 @@
+package excep;
+
+import java.io.*;
+import java.util.*;
+
+
+public class excep{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int m = sc.nextInt();
+		int n = sc.nextInt();
+		
+		sc.close();
+		
+		try {
+			int ans = m/n;
+			System.out.println(ans);
+		}
+		try {
+			int ans = n/m;
+			System.out.println(ans);
+		}
+		catch (ArithmeticException e){
+			
+			System.out.println("Can not divide by zero");
+			
+		}
+		finally {
+			System.out.println("Final block");
+		}
+		System.out.println("Outside the exception");
+		//System.out.println(ans);
+	}
+}
