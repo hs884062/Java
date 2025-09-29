@@ -1,0 +1,20 @@
+package polymorphism;
+
+class Bank{
+	void deposit(int amt) {
+		System.out.println("Deposit by cash");
+	}
+	void deposit(int amt, String cheque) {
+		System.out.println("Deposit by cheque");
+	}
+	void deposit(int amt, String upiid, String name) {
+		System.out.println("Deposit by upi");
+	}
+}
+
+public class compile{
+	public static void main(String[] args) {
+		Bank b = new Bank();
+		b.deposit(1000);
+		b.deposit(10000,"chq");
+		b.deposit(100000,"Ravi","id");

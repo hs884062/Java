@@ -1,0 +1,36 @@
+package absClass;
+
+abstract class Vehicle{
+	abstract void start();
+	abstract void brake();
+	
+	
+}
+
+class Car extends Vehicle{
+	void start() {
+		System.out.println("Car :starts");
+	}
+	void brake() {
+		System.out.println("Car : Appiles Brakes");
+	}
+}
+class Bike extends Vehicle{
+	void start() {
+		System.out.println("Bike : Starts");
+		
+	}
+	void brake() {
+		System.out.println("Bike : Applies Brakes");
+	}
+}
+
+
+public class absClass{
+	public static void main(String[] args) {
+		Vehicle v1 = new Car();
+		Vehicle v2 = new Bike();
+		v1.start();
+		v2.brake();
+	}
+}
